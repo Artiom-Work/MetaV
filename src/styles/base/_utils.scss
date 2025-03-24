@@ -1,12 +1,9 @@
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
-  padding-inline: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
 }
-// .container-wide {
-//   max-width: 1920px;
-//   margin-inline: auto;
-// }
+
 .visually-hidden {
   @include visually-hidden;
 }
@@ -22,6 +19,10 @@
     display: none !important;
   }
 }
+// .container-wide {
+//   max-width: 1920px;
+//   margin-inline: auto;
+// }
 // .lock-body {
 //   overflow: hidden;
 // }

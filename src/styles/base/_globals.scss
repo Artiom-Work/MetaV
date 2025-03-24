@@ -3,9 +3,13 @@ body {
 
   font-family: var(--font-family-base);
   font-weight: 400;
-  // line-height: 1.28;
-  // color: var(--color-dark);
-  // background-color: var(--color-light);
+  line-height: 1.6;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+
+  @include desktop-media-above {
+    overflow-x: hidden;
+  }
 }
 
 a,

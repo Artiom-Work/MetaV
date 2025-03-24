@@ -1,0 +1,60 @@
+.page-bg-layer {
+  position: relative;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  width: 100%;
+  height: 3791px; // переопределить в конце вёрстки!
+  @include desktop-media {
+    overflow-x: hidden;
+  }
+}
+.radial-bg-glow {
+  --radialHeight: 1040px;
+  --radialPositionY: 0;
+  --radialPositionX: calc(var(--radialHeight) / 2 * -1);
+
+  position: absolute;
+  @include square(var(--radialHeight));
+  background: url(/images/svg/radial-big.svg) no-repeat center / 110%;
+  top: var(--radialPositionY);
+  left: var(--radialPositionX);
+  border-radius: 50%;
+  filter: opacity(60%);
+
+  &--small {
+    --radialHeight: 886px;
+    --radialPositionY: calc(var(--radialHeight) / 2 * -1);
+    --radialPositionX: calc(var(--radialHeight) * 0.05);
+
+    top: var(--radialPositionY);
+    left: var(--radialPositionX);
+    translate: var(--radialPositionX) 0;
+  }
+  &--right {
+    left: unset;
+    right: var(--radialPositionX);
+
+    &-top {
+      --radialPositionY: calc(var(--radialHeight) * -0.11);
+    }
+    &-middle {
+      --radialPositionY: var(--radialHeight);
+      --radialPositionX: calc(var(--radialHeight) * -0.65);
+    }
+    &-bottom {
+      --radialPositionY: calc(var(--radialHeight) * -0.27);
+      top: unset;
+      bottom: var(--radialPositionY);
+    }
+  }
+  &--left {
+    &-top {
+      --radialPositionY: calc(var(--radialHeight) * 0.45);
+    }
+    &-bottom {
+      --radialPositionY: calc(var(--radialHeight) * 0.5);
+      top: unset;
+      bottom: var(--radialPositionY);
+    }
+  }
+}

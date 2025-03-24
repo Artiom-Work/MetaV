@@ -1,36 +1,38 @@
 :root {
-  --color-dark: #191a23;
-  // --color-dark-alt: #292a32;
+  --color-dark: #000001;
+  --color-dark-alt: #090823;
   --color-light: #ffffff;
+  --color-light-opacity: #ffffffcc;
   // --color-accent: #b9ff66;
-  // --color-gray: #f3f3f3;
-  // --color-gray-alt: #898989;
 
   --border: 1px solid var(--color-dark);
-  // --border-radius: 14px;
-  // --border-radius-small: 7px;
-  // --border-radius-large: 45px;
+  --border-radius: 15px;
+  --border-radius-small: 5px;
+  --border-radius-large: 25px;
 
   // --shadow: 0 5px 0 0 var(--color-dark);
 
-  --font-family-base: "Space Grotesk", sans-serif;
-
-  // --container-width: 1240px;
-  // --container-padding-x: 20px;
+  --font-family-base: "Poppins", sans-serif;
+  --font-family-accent: "Orbitron", sans-serif;
 
   // --container-padding-y: 70px;
 
   // --input-height: 59px;
-  // --button-height: 68px;
+  --button-heigh-large: 54px;
+  --button-height: 44px;
+  --button-height-small: 36px;
 
   --transition-duration: 0.3s;
 
   // paths
   // --image-path: "../../images";
-  @include desktop-media {
-    --container-padding-y: 50px;
-  }
-  @include mobile-media {
-    --container-padding-y: 30px;
-  }
+
+  --container-width: 1200px;
+  --container-padding-x: 120px;
+  // @include desktop-media {
+  //   --container-padding-y: 50px;
+  // }
+  // @include mobile-media {
+  //   --container-padding-y: 30px;
+  // }
 }
