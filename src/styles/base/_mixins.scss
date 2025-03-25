@@ -54,3 +54,13 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+@mixin accent-text {
+  background-image: linear-gradient(
+    var(--color-light) 50%,
+    var(--color-accent-pink) 50%
+  );
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

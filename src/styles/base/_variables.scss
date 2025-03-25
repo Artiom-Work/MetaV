@@ -2,8 +2,14 @@
   --color-dark: #000001;
   --color-dark-alt: #090823;
   --color-light: #ffffff;
-  --color-light-opacity: #ffffffcc;
-  // --color-accent: #b9ff66;
+  --color-accent-opacity: #ffffffcc;
+  --color-accent-pink: #f76bf7;
+  --color-accent-aqua: #64cef5;
+  --color-accent-grad: linear-gradient(
+    158deg,
+    var(--color-accent-pink) 0%,
+    var(--color-accent-aqua) 100%
+  );
 
   --border: 1px solid var(--color-dark);
   --border-radius: 15px;

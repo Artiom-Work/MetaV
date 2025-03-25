@@ -19,12 +19,13 @@
     display: none !important;
   }
 }
+.lock-body {
+  overflow: hidden;
+}
+
 // .container-wide {
 //   max-width: 1920px;
 //   margin-inline: auto;
-// }
-// .lock-body {
-//   overflow: hidden;
 // }
 // .hide-layer {
 //   position: relative;

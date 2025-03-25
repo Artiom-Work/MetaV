@@ -1,2 +1,11 @@
 .header {
+  @include flex-space-between;
+  gap: 20px;
+
+  padding-right: 146px;
+  padding-block: 43px 0;
+
+  @include mobile-media {
+    padding: 50px 24px 0;
+  }
 }

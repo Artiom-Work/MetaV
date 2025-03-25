@@ -1,0 +1,19 @@
+.logo {
+  position: relative;
+  z-index: 5;
+  &__link {
+    @include accent-text;
+
+    font-family: var(--font-family-accent);
+    font-size: 22px;
+    font-weight: 700;
+
+    @include hover {
+      background-position: 0 100%;
+    }
+    @include active {
+      scale: 0.95;
+      opacity: 60%;
+    }
+  }
+}
