@@ -1,29 +1,56 @@
 .button {
-  // @include flex-center(true);
+  @include flex-center(true);
 
-  // height: var(--button-height);
-  // padding-inline: 35px;
-  // font-size: 20px;
-  // color: var(--color-light);
-  // background-color: var(--color-dark);
-  // border: var(--border);
-  // border-radius: var(--border-radius);
+  height: var(--button-height-large);
+  padding-inline: 29px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: var(--border-radius-small);
+  transition-duration: var(--transition-duration);
 
-  // @include hover {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
-  // }
-  // &--transparent {
-  //   color: var(--color-dark);
-  //   background-color: transparent;
-  // }
-  // &--accent {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
+  @include hover {
+    outline: var(--border-accent);
+    color: var(--color-accent-pink);
+  }
+  @include active {
+    scale: 0.95;
+    opacity: 0.9;
+  }
 
-  //   @include hover {
-  //     background-color: var(--color-dark);
-  //     color: var(--color-accent);
-  //   }
-  // }
+  @include mobile-media {
+    font-size: 12px;
+    padding-inline: 14px;
+  }
+  &--transparent {
+    --button-height-large: 52px;
+
+    position: relative;
+    background-color: var(--color-dark);
+
+    @include mobile-media {
+      --button-height-large: 31px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 102%;
+      height: 105%;
+      border-radius: inherit;
+      left: -0.1em;
+      top: -0.07em;
+      background: var(--color-accent-grad-bright);
+      z-index: -1;
+
+      @include mobile-media {
+        width: 102.5%;
+      }
+    }
+  }
+  &--accent-color {
+    background: var(--color-accent-grad-bright);
+
+    @include hover {
+      background-color: var(--color-dark);
+    }
+  }
 }

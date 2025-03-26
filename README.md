@@ -26,7 +26,7 @@ $\color{limegreen}\text{Учебная работа}$
 
 Макет -> [**Figma**](...)
 
-Вёрстка -> [**Git pages**](https://artiom-work.github.io/.../)
+Вёрстка -> [**Git pages**](https://artiom-work.github.io/MetaV/)
 
 <img src="./public/images/website/readme-preview-image.webp" width="700" alt="Изображение макета страницы">
 
