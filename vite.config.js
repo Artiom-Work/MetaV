@@ -27,9 +27,8 @@ export default defineConfig(() => {
 		plugins: [
 			ViteImageOptimizer({
 				webp: {
-					quality: 80,
-					lossless: true,
-					effort: 6,
+					quality: 75,
+					effort: 4,
 				},
 				exclude: /node_modules/,
 				verbose: true

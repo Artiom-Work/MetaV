@@ -36,15 +36,20 @@
         height: 53%;
         left: 14.7%;
         bottom: -33.5%;
-        filter: blur(200px);
+        filter: blur(90px);
         background: #000;
 
+        @include tablet-media {
+          left: 0.7%;
+          bottom: -18.5%;
+          filter: blur(60px);
+        }
         @include mobile-s-media {
           filter: blur(50px);
           bottom: -15%;
           width: 161%;
           height: 55%;
-          left: -23.3%;
+          left: -24.3%;
         }
       }
       &::before {

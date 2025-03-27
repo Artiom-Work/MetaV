@@ -58,7 +58,21 @@ h4,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   &-bright {
-    background: linear-gradient(158deg, #d10ed1 0%, #10a3da 100%);
+    background: linear-gradient(
+      158deg,
+      var(--color-accent-pink-bright) 0%,
+      var(--color-accent-aqua-bright) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-light {
+    background: linear-gradient(
+      158deg,
+      var(--color-accent-pink-light) 0%,
+      var(--color-accent-aqua-light) 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

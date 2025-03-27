@@ -1,0 +1,51 @@
+.about {
+  @include flex-space-between;
+  padding-block: 116px 0;
+  gap: 46px;
+
+  @include tablet-media {
+    padding-block: 50px 0;
+    flex-direction: column;
+  }
+  @include mobile-media {
+    padding-block: 79px 0;
+  }
+  &__image {
+    @include mobile-s-media {
+      max-width: 90%;
+    }
+  }
+  &__info {
+    position: relative;
+    max-width: 524px;
+    width: 100%;
+    @include tablet-media {
+      padding-left: 10px;
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      @include tablet-media {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: 52px;
+      @include tablet-media {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  &__button {
+    height: var(--button-height);
+    font-size: 18px;
+    padding-inline: 18.5px;
+
+    @include mobile-media {
+      font-size: 12px;
+    }
+  }
+}

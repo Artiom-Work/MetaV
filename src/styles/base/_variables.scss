@@ -4,15 +4,26 @@
   --color-light: #ffffff;
   --color-accent-opacity: #ffffffcc;
   --color-accent-pink: #f76bf7;
+  --color-accent-pink-light: #f86cf8;
   --color-accent-pink-bright: #d10ed1;
   --color-accent-aqua: #64cef5;
-  --color-accent-aqua: #10a3da;
+  --color-accent-aqua-light: #64cef5;
+  --color-accent-aqua-bright: #10a3da;
   --color-accent-grad: linear-gradient(
     158deg,
     var(--color-accent-pink) 0%,
     var(--color-accent-aqua) 100%
   );
-  --color-accent-grad-bright: linear-gradient(158deg, #d10ed1 0%, #10a3da 100%);
+  --color-accent-grad-bright: linear-gradient(
+    158deg,
+    var(--color-accent-pink-bright) 0%,
+    var(--color-accent-aqua-bright) 100%
+  );
+  --color-accent-grad-light: linear-gradient(
+    158deg,
+    var(--color-accent-pink-light) 0%,
+    var(--color-accent-aqua-light) 100%
+  );
 
   --border-accent: 1px solid var(--color-accent-pink);
   --border-radius: 15px;
@@ -40,6 +51,7 @@
 
   @include mobile-media {
     --button-height-large: 32px;
+    --button-height: 32px;
   }
   @include tablet-media {
     --container-padding-x: 60px;
