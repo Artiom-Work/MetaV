@@ -48,33 +48,3 @@ h4,
 .h4 {
   @include fluid-text(20, 14);
 }
-.accent-text {
-  background: linear-gradient(
-    158deg,
-    var(--color-accent-pink) 0%,
-    var(--color-accent-aqua) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  &-bright {
-    background: linear-gradient(
-      158deg,
-      var(--color-accent-pink-bright) 0%,
-      var(--color-accent-aqua-bright) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  &-light {
-    background: linear-gradient(
-      158deg,
-      var(--color-accent-pink-light) 0%,
-      var(--color-accent-aqua-light) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}

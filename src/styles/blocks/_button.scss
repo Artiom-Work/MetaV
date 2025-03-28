@@ -1,7 +1,7 @@
 .button {
   @include flex-center(true);
 
-  height: var(--button-height-large);
+  min-height: var(--button-height-large);
   padding-inline: 29px;
   font-size: 20px;
   font-weight: 500;
