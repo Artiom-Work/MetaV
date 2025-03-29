@@ -1,0 +1,28 @@
+.previewSwiper {
+  @include mobile-media {
+    overflow: visible !important;
+  }
+}
+
+.swiper-wrapper {
+  @include mobile-media {
+    overflow: visible;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.swiper-slide {
+  max-width: 1182px;
+  position: relative;
+  z-index: 100;
+  @include desktop-media {
+    max-width: 900px;
+  }
+  @include tablet-media {
+    max-width: 700px;
+  }
+  & video {
+    pointer-events: none;
+  }
+}

@@ -54,3 +54,44 @@
     }
   }
 }
+
+.play-button {
+  @include square(8.3vw);
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  translate: -50% -44%;
+  max-width: 120px;
+  min-width: 60px;
+  border-radius: 50%;
+  border: var(--border-light);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    left: 60%;
+    top: 50%;
+    translate: -60% -50%;
+    background: url(/images/svg/icons/play-icon.svg) no-repeat center/ cover;
+  }
+
+  @include mobile-media {
+    position: relative;
+    left: unset;
+    top: unset;
+    translate: unset;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &::before {
+      width: 29%;
+      height: 37%;
+      left: 58%;
+      translate: -58% -50%;
+    }
+  }
+}

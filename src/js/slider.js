@@ -1,31 +1,56 @@
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
-// import Swiper from 'swiper';
-// import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import 'swiper/css';
+import Swiper from 'swiper';
 
-// const swiper = new Swiper('.swiper', {
-// 	// Optional parameters
-// 	modules: [Navigation, Pagination, Scrollbar],
-// 	direction: 'horizontal',
-// 	loop: true,
+function initSwiper() {
+	if (window.innerWidth >= 768) {
+		const swiper = new Swiper('.previewSwiper', {
+			direction: 'horizontal',
+			slidesPerView: 'auto',
+			spaceBetween: 54,
+			centeredSlides: true,
 
-// 	// If we need pagination
-// 	pagination: {
-// 		el: '.swiper-pagination',
-// 		clickable: true
-// 	},
+			on: {
+				sliderMove: function () {
+					document.querySelectorAll('.swiper-slide video').forEach(video => {
+						video.style.pointerEvents = 'none';
+					});
+				},
+				touchEnd: function () {
+					document.querySelectorAll('.swiper-slide video').forEach(video => {
+						video.style.pointerEvents = 'auto';
+					});
+				}
+			}
+		});
+		return swiper;
+	}
+	return null;
+}
 
-// 	// Navigation arrows
-// 	navigation: {
-// 		nextEl: '.swiper-button-next',
-// 		prevEl: '.swiper-button-prev',
-// 	},
+let swiperInstance = initSwiper();
 
-// 	// And if we need scrollbar
-// 	scrollbar: {
-// 		el: '.swiper-scrollbar',
-// 	},
-// });
+window.addEventListener('resize', () => {
+	if (window.innerWidth >= 768 && !swiperInstance) {
+		swiperInstance = initSwiper();
+	} else if (window.innerWidth < 768 && swiperInstance) {
+		swiperInstance.destroy(true, true);
+		swiperInstance = null;
+	}
+});
 
+function debounce(func, timeout = 300) {
+	let timer;
+	return (...args) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => { func.apply(this, args); }, timeout);
+	};
+}
+
+window.addEventListener('resize', debounce(() => {
+	if (window.innerWidth >= 768 && !swiperInstance) {
+		swiperInstance = initSwiper();
+	} else if (window.innerWidth < 768 && swiperInstance) {
+		swiperInstance.destroy(true, true);
+		swiperInstance = null;
+	}
+}));

@@ -1,0 +1,117 @@
+.preview {
+  padding-block: 185px 224px;
+
+  @include desktop-media {
+    padding-block: 76px 120px;
+  }
+
+  @include mobile-media {
+    padding-block: 76px;
+    padding-inline: 24px;
+  }
+  &__header {
+    max-width: 561px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    margin-block: 0 55px;
+
+    @include mobile-media {
+      text-align: start;
+      padding-left: 10px;
+      margin-block: 0 33px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include mobile-media {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__description {
+    line-height: 1.5;
+  }
+
+  &__video {
+    position: relative;
+    border-radius: var(--border-radius-large);
+    width: 100%;
+    height: auto;
+
+    @include mobile-media {
+      margin-bottom: 33px;
+      min-height: 273px;
+      object-fit: cover;
+    }
+    &-wrapper {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100.5%;
+        height: 101%;
+        border-radius: var(--border-radius-large);
+        left: -0.1em;
+        top: -0.1em;
+        background: var(--color-accent-grad-bright);
+        background-color: red;
+        z-index: -1;
+
+        @include mobile-media {
+          width: 101%;
+        }
+      }
+    }
+
+    &-info {
+      @include mobile-media {
+        display: flex;
+        row-gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      @include mobile-s-media {
+        justify-content: space-between;
+        padding-right: 10px;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 39px;
+
+      left: 1px;
+      bottom: 2px;
+      width: calc(100% - 2px);
+      height: calc(22.8% - 2px);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+
+      @include mobile-media {
+        position: relative;
+        display: block;
+        max-width: 256px;
+        background: transparent;
+        backdrop-filter: unset;
+        padding: 0;
+      }
+    }
+  }
+
+  &__body {
+    @include mobile-media {
+      padding-left: 10px;
+    }
+  }
+}
