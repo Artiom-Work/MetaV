@@ -1,2 +1,119 @@
 .footer {
+  background-color: var(--color-dark-alt);
+  padding-block: 107px 126px;
+
+  @include tablet-media {
+    padding-block: 55px;
+  }
+  @include mobile-media {
+    padding: 34px 34px 34px 22px;
+  }
+  .container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include tablet-media {
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    @include mobile-media {
+      align-items: start;
+    }
+  }
+  &__header {
+    max-width: 460px;
+
+    @include tablet-media {
+      max-width: 700px;
+      text-align: center;
+      margin-inline: auto;
+    }
+    @include mobile-media {
+      max-width: 460px;
+      text-align: start;
+      margin-inline: 0 auto;
+    }
+  }
+
+  &__logo {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+
+      @include mobile-media {
+        margin-bottom: 7px;
+      }
+    }
+  }
+  &__nav-block {
+    @include flex-space-between;
+    column-gap: 76px;
+
+    @include mobile-s-media {
+      width: 100%;
+      column-gap: 30px;
+    }
+  }
+  &__contacts {
+    max-width: 216px;
+
+    @include tablet-media {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__copyright {
+    @include mobile-media {
+      @include fluid-text(16, 12);
+    }
+  }
+}
+
+.footer__nav {
+  &-section {
+    &--contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+
+      @include mobile-media {
+        gap: 0;
+      }
+    }
+  }
+  &-section-title {
+    &:not(:last-child):not(.footer__nav-section-title--conacts) {
+      margin-bottom: 21px;
+
+      @include mobile-media {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+
+      @include mobile-media {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &-link {
+    @include accent-text;
+
+    @include mobile-media {
+      @include fluid-text(16, 12);
+    }
+    @include hover {
+      background-position: 0 100%;
+    }
+    @include active {
+      scale: 0.95;
+      opacity: 60%;
+    }
+  }
 }

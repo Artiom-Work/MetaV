@@ -15,5 +15,29 @@
       scale: 0.95;
       opacity: 60%;
     }
+
+    &--footer {
+      @include fluid-text(50, 30);
+      background-position: unset;
+      background-size: unset;
+      background: linear-gradient(
+        158deg,
+        var(--color-accent-pink) 15%,
+        var(--color-accent-aqua) 80%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: var(--font-family-accent);
+      font-weight: 700;
+
+      @include hover {
+        opacity: 0.8;
+      }
+      @include active {
+        scale: 0.95;
+        opacity: 60%;
+      }
+    }
   }
 }

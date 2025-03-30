@@ -1,22 +1,27 @@
 .soc1als {
-  // &__list {
-  //   display: flex;
-  //   column-gap: 20px;
-  // }
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
 
-  // &__link {
-  //   @include flex-center(true);
-  //   @include square(30px);
+    @include mobile-media {
+      column-gap: 10px;
+    }
+  }
 
-  //   color: var(--color-dark);
-  //   background-color: var(--color-light);
-  //   border-radius: 50%;
-  //   @include hover {
-  //     background-color: var(--color-accent);
-  //   }
-  //   svg {
-  //     width: 55%;
-  //     height: 55%;
-  //   }
-  // }
+  &__link {
+    @include hover {
+      opacity: 0.8;
+    }
+    @include active {
+      scale: 0.95;
+      opacity: 0.6;
+    }
+  }
+  &__icon {
+    @include mobile-media {
+      width: 19px;
+      aspect-ratio: 1;
+    }
+  }
 }

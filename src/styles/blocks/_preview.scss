@@ -6,7 +6,7 @@
   }
 
   @include mobile-media {
-    padding-block: 76px;
+    padding-block: 76px 73px;
     padding-inline: 24px;
   }
   &__header {

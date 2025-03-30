@@ -22,13 +22,15 @@
 
 <body>
 	<div class="page-bg-layer">
-		<div class="radial-bg-glow radial-bg-glow--small"></div>
-		<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-top"></div>
-		<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-top"></div>
-		<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-middle"></div>
-		<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-middle visible-mobile"></div>
-		<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-bottom"></div>
-		<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-bottom"></div>
+		<div class="radials-bg-glowes">
+			<div class="radial-bg-glow radial-bg-glow--small"></div>
+			<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-top"></div>
+			<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-top"></div>
+			<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-middle"></div>
+			<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-middle visible-mobile"></div>
+			<div class="radial-bg-glow radial-bg-glow--left radial-bg-glow--left-bottom"></div>
+			<div class="radial-bg-glow radial-bg-glow--right radial-bg-glow--right-bottom"></div>
+		</div>
 
 		<header class="header container">
 			<div class="header__logo logo">
@@ -133,7 +135,7 @@
 				</div>
 			</section>
 
-			<section class="about container">
+			<section class="about container" id="about">
 				<h2 class="visually-hidden">About Metaverse</h2>
 
 				<img class="about__image" src="/images/about/about-image.webp" srcset="/images/about/about-image@2x.webp 2x"
@@ -375,18 +377,136 @@
 					</div>
 				</div>
 			</section>
-
 		</main>
 
-		<footer class="footer">
-		</footer>
+
 	</div>
+	<footer class="footer">
+		<div class="container">
+			<h2 class="visually-hidden">Metaverse site footer</h2>
+			<header class="footer__header">
+				<h3 class="visually-hidden">Metaverse site footer</h3>
+				<div class="footer__logo logo">
+					<a class="logo__link logo__link--footer accent-text-more-pink" href="index.html"
+						aria-label="page logotupe">MetaV</a>
+				</div>
 
+				<div class="section-description">
+					<p>
+						Adipiscing at in&nbsp;tellus integer. Pellentesque massa placerat duis ultricies lacus. Nisi porta
+						lorem mollis aliquam ut&nbsp;porttitor
+					</p>
+				</div>
+			</header>
 
+			<div class="footer__nav-block">
+				<h3 class="visually-hidden">Metaverse site footer navigation</h3>
 
+				<section class="footer__nav-section">
+					<h4 class="footer__nav-section-title">About Us</h4>
 
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="#about">About&nbsp;MetaV</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="#contacts">Contact&nbsp;Us</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">FAQ</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Privacy&nbsp;Policy</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Terms&nbsp;of&nbsp;Service</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
 
+				<section class="footer__nav-section">
+					<h4 class="footer__nav-section-title">Services</h4>
 
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">NFT&nbsp;Marketplace</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Virtual&nbsp;Concert</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Gaming</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Artwork</a>
+							</li>
+							<li class="footer__nav-item">
+								<a class="footer__nav-link" href="/">Online&nbsp;Travel</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+
+			<div class="footer__contacts">
+				<h3 class="visually-hidden">Metaverse site contacts</h3>
+				<section class="footer__nav-section footer__nav-section--contacts">
+					<h4 class="footer__nav-section-title footer__nav-section-title--conacts hidden-mobile">Contact</h4>
+
+					<nav class="footer__nav soc1als">
+						<ul class="soc1als__list">
+							<li>
+								<a class="soc1als__link" href="https://www.linkedin.com/" target="_blank">
+									<span class="visually-hidden">LinkedIn</span>
+
+									<svg class="soc1als__icon" viewBox="0 0 24 24" width="33" height="33">
+										<use xlink:href="/images/svg/icons/sprite-icons.svg#social-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="soc1als__link" href="https://x.com/" target="_blank">
+									<span class="visually-hidden">Twitter</span>
+
+									<svg class="soc1als__icon" viewBox="-2 -2 24 24" width="33" height="33">
+										<use xlink:href="/images/svg/icons/sprite-icons.svg#social-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="soc1als__link" href="https://www.instagram.com/" target="_blank">
+									<span class="visually-hidden">Instagramm</span>
+
+									<svg class="soc1als__icon" viewBox="0 0 24 24" width="33" height="33">
+										<use xlink:href="/images/svg/icons/sprite-icons.svg#social-instagramm"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="soc1als__link" href="https://web.facebook.com/" target="_blank">
+									<span class="visually-hidden">Facebook</span>
+
+									<svg class="soc1als__icon" viewBox="0 0 24 24" width="33" height="33">
+										<use xlink:href="/images/svg/icons/sprite-icons.svg#social-facebook"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="footer__copyright">
+						<p>
+							2022&nbsp;&copy; MetaV.com All right reserved.
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</footer>
 
 	<!-- <script src="libs/jquery/jquery-3.7.1.min.js"></script>  for accordion and modal-->
 	<!-- <script src="/libs/jquery/jquery-ui.1.14.0.min.js"></script> for accordion-->
