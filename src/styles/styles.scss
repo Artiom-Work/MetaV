@@ -6,11 +6,11 @@
 @import "./base/_utils.scss";
 @import "./base/_globals.scss";
 //blocks
+@import "./blocks/_button.scss";
 @import "./blocks/_page-bg-layer.scss";
 @import "./blocks/_logo.scss";
 @import "./blocks/_menu-list.scss";
 @import "./blocks/_mobile-menu.scss";
-@import "./blocks/_button.scss";
 @import "./blocks/_header.scss";
 @import "./blocks/_promo.scss";
 @import "./blocks/_about.scss";
@@ -18,7 +18,6 @@
 @import "./blocks/_project-card.scss";
 @import "./blocks/_preview.scss";
 @import "./blocks/_preview-slider.scss";
-@import "./blocks/_cross-button.scss";
 @import "./blocks/_soc1als.scss";
 @import "./blocks/_footer.scss";
 @import "./blocks/_popup.scss";

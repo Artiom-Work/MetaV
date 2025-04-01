@@ -28,8 +28,12 @@
     height: 12.5px;
     color: var(--color-light);
     transition-duration: var(--transition-duration);
+
     @include hover {
-      color: var(--color-accent-grad);
+      color: var(--color-accent-pink);
+    }
+    @include active {
+      opacity: 0.5;
     }
     & span {
       display: block;

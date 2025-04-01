@@ -7,5 +7,4 @@ $("#popup").iziModal({
 $('.open-popup').click((e) => {
 	e.preventDefault();
 	$("#popup").iziModal('open');
-
 });
