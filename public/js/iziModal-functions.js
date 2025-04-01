@@ -1,7 +1,11 @@
-// 'use strict';
+'use strict';
 
-// $("#modal").iziModal();
-// $('.trigger').click((e) => {
-// 	e.preventDefault();
-// 	$("#modal").iziModal('open');
-// });
+$("#popup").iziModal({
+	bodyOverflow: true
+});
+
+$('.open-popup').click((e) => {
+	e.preventDefault();
+	$("#popup").iziModal('open');
+
+});

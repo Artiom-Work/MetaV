@@ -1,0 +1,38 @@
+.popup {
+  padding: 2px;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius-large) !important;
+  &.hasShadow::after {
+    display: none;
+  }
+  .iziModal-wrap {
+    border-radius: var(--border-radius-large) !important;
+    overflow-y: auto;
+  }
+  .iziModal-content {
+    border-radius: 5px !important;
+    padding: 4px 4px 0 4px !important;
+    background: var(--color-accent-grad-bright) !important;
+    overflow: visible !important;
+  }
+  &__image {
+    display: inline-block;
+    border-radius: var(--border-radius-large);
+  }
+
+  .popup__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 27px;
+
+    @include mobile-media {
+      margin: 20px;
+    }
+  }
+}
+
+.iziModal-overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}

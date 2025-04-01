@@ -6,7 +6,6 @@ videoList.forEach(videoBlock => {
 		const video = videoBlock.querySelector('.preview__video');
 		const playBtn = videoBlock.querySelector('.play-button');
 
-		console.log(playBtn);
 		playBtn.addEventListener('click', () => {
 			const videoName = videoBlock.querySelector('.video-name');
 			if (video.paused) {

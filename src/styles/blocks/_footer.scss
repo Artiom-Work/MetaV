@@ -8,6 +8,7 @@
   @include mobile-media {
     padding: 34px 34px 34px 22px;
   }
+
   .container {
     display: flex;
     align-items: start;
@@ -22,6 +23,7 @@
       align-items: start;
     }
   }
+
   &__header {
     max-width: 460px;
 
@@ -46,6 +48,7 @@
       }
     }
   }
+
   &__nav-block {
     @include flex-space-between;
     column-gap: 76px;
@@ -55,6 +58,7 @@
       column-gap: 30px;
     }
   }
+
   &__contacts {
     max-width: 216px;
 
@@ -64,6 +68,7 @@
       align-items: center;
     }
   }
+
   &__copyright {
     @include mobile-media {
       @include fluid-text(16, 12);
